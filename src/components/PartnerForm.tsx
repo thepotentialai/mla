@@ -64,8 +64,8 @@ function PartnerForm() {
                                         className="cursor-pointer"
                                     />
                                 </div>
-                                <h1 className="text-3xl font-bold text-gray-900 mb-2">Become a Partner</h1>
-                                <p className="text-[#EA3A8A] font-semibold text-lg">JOIN OUR FIGHT. SAVE LIVES.</p>
+                                <h1 className="text-3xl font-bold text-gray-900 mb-2">Devenir un Partenaire</h1>
+                                <p className="text-[#EA3A8A] font-semibold text-lg">REJOIGNONS NOTRE COMBAT. SAUVEZ DES VIES.</p>
                             </div>
 
 
@@ -73,7 +73,7 @@ function PartnerForm() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
                                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-1">
-                                        First Name <span className="text-[#EA3A8A]">*</span>
+                                        Prénom <span className="text-[#EA3A8A]">*</span>
                                     </label>
                                     <input
                                         type="text"
@@ -88,7 +88,7 @@ function PartnerForm() {
 
                                 <div>
                                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-1">
-                                        Last Name <span className="text-[#EA3A8A]">*</span>
+                                        Nom <span className="text-[#EA3A8A]">*</span>
                                     </label>
                                     <input
                                         type="text"
@@ -118,7 +118,7 @@ function PartnerForm() {
 
                                 <div>
                                     <label htmlFor="companyName" className="block text-sm font-medium text-gray-700 mb-1">
-                                        Company Name <span className="text-[#EA3A8A]">*</span>
+                                        Nom de l'entreprise <span className="text-[#EA3A8A]">*</span>
                                     </label>
                                     <input
                                         type="text"
@@ -134,7 +134,7 @@ function PartnerForm() {
 
                             <div>
                                 <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                                    Phone (Optional)
+                                    Téléphone (Optionnel)
                                 </label>
                                 <input
                                     type="tel"
@@ -148,7 +148,7 @@ function PartnerForm() {
 
                             <div>
                                 <label htmlFor="comments" className="block text-sm font-medium text-gray-700 mb-1">
-                                    Comments (Optional)
+                                    Commentaires (Optionnel)
                                 </label>
                                 <textarea
                                     id="comments"
@@ -156,7 +156,7 @@ function PartnerForm() {
                                     rows={4}
                                     value={formData.comments}
                                     onChange={handleChange}
-                                    placeholder="Please tell us what you're interested in learning more about or if you have a specific partnership in mind."
+                                    placeholder="Veuillez nous dire ce que vous êtes intéressé à en savoir plus ou si vous avez une idée de partenariat en tête."
                                     className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#EA3A8A] focus:border-transparent"
                                 />
                             </div>
@@ -166,7 +166,7 @@ function PartnerForm() {
                                     type="submit"
                                     className="w-full bg-[#EA3A8A] text-white py-3 px-6 rounded-md hover:bg-[#EA3A8A]/90 transition-colors font-semibold text-lg"
                                 >
-                                    Submit
+                                    Envoyer
                                 </button>
                             </div>
                         </form>

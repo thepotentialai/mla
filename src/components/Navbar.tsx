@@ -1,6 +1,8 @@
-import { Search, Heart, ChevronDown, ChevronRight, Menu, X } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { Heart, ChevronDown, ChevronRight, Menu, X } from 'lucide-react';
+import { useState } from 'react';
 import { Link } from "react-router-dom";
+import logo from '../assets/logos/logo.png';
+import { activitiesSections } from '../config/activities';
 
 function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -8,29 +10,105 @@ function Navbar() {
     const [activeDesktopSubmenu, setActiveDesktopSubmenu] = useState<number | null>(null);
 
     // Navigation data
+    // const navItems = [
+    //     {
+    //         title: "A propos de MLA",
+    //         subItems: [
+    //             { title: "À propos de nous", link: "/cancer-seins" },
+    //             { title: "Faits et statistiques", link: "#statistiques" },
+    //             { title: "Signes et symptômes", link: "#symptomes" },
+    //             { title: "Facteurs de risque", link: "#facteurs-risque" },
+    //             { title: "Dépistage et détection", link: "#depistage" },
+    //             { title: "Diagnostic", link: "#diagnostic" },
+    //             { title: "Traitement", link: "#traitement" },
+    //             { title: "CCIS (Carcinome canalaire in situ)", link: "#ccis" },
+    //             { title: "Cancer du sein métastatique", link: "#metastatique" },
+    //             { title: "Sujets liés à la survie", link: "#survie" },
+    //             { title: "Quoi de neuf dans le cancer du sein", link: "#actualites" },
+    //             { title: "Équité en santé", link: "#equite-sante" }
+    //         ],
+    //         link: '/a-propos'
+    //     },
+    //     {
+    //         title: "Activités",
+    //         subItems: [],
+    //         link: '/realisations'
+    //     },
+    //     {
+    //         title: "Comment nous aider ?",
+    //         subItems: [
+    //             {
+    //                 title: "Façons de donner",
+    //                 items: [
+    //                     "Faire un don maintenant",
+    //                     "Don employeur correspondant",
+    //                     "Don planifié",
+    //                     "Don individuel",
+    //                     "Don commémoratif",
+    //                     "Autres façons de donner"
+    //                 ],
+    //                 link: "#"
+    //             },
+    //             {
+    //                 title: "Partenariats",
+    //                 items: [
+    //                     "Devenir partenaire",
+    //                     "Rencontrer nos partenaires"
+    //                 ],
+    //                 link: "#"
+    //             },
+    //             {
+    //                 title: "Collecte de fonds",
+    //                 items: [
+    //                     "Course ou marche",
+    //                     "Marche de 3 jours",
+    //                     "Collecte DIY",
+    //                     "Jouer avec un but"
+    //                 ],
+    //                 link: "#"
+    //             },
+    //             {
+    //                 title: "Plaidoyer",
+    //                 items: [
+    //                     "S'impliquer",
+    //                     "Passer à l'action",
+    //                     "Devenir un défenseur de la science"
+    //                 ],
+    //                 link: "#"
+    //             }
+    //         ],
+    //         link: '#'
+    //     }
+    // ];
     const navItems = [
         {
             title: "A propos de MLA",
             subItems: [
-                { title: "À propos du cancer du sein", link: "/cancer-seins" },
-                { title: "Faits et statistiques", link: "#statistiques" },
-                { title: "Signes et symptômes", link: "#symptomes" },
-                { title: "Facteurs de risque", link: "#facteurs-risque" },
-                { title: "Dépistage et détection", link: "#depistage" },
-                { title: "Diagnostic", link: "#diagnostic" },
-                { title: "Traitement", link: "#traitement" },
-                { title: "CCIS (Carcinome canalaire in situ)", link: "#ccis" },
-                { title: "Cancer du sein métastatique", link: "#metastatique" },
+                { title: "MedStudents Leaders Association"},
+                { title: "Missions", link: "/a-propos#mission" },
+                { title: "Visions", link: "/a-propos#vision" },
+                { title: "Valeurs", link: "/a-propos#valeurs" },
+                { title: "Equipes", link: "/a-propos#equipe" },
+                { title: "Nos Innovations", link: "#innovations" },
+                { title: "Faits et Statistiques", link: "#faits-statistiques" },
+                { title: "Nos Temoignages", link: "#temoignages" },
+                { title: "Nos Héros", link: "#nos-heros" },
+                { title: "Partenaires", link: "/partenaires" },
                 { title: "Sujets liés à la survie", link: "#survie" },
-                { title: "Quoi de neuf dans le cancer du sein", link: "#actualites" },
-                { title: "Équité en santé", link: "#equite-sante" }
+                // { title: "Quoi de neuf dans le cancer du sein", link: "#actualites" },
+                // { title: "Équité en santé", link: "#equite-sante" }
             ],
             link: '/a-propos'
         },
+        // {
+        //     title: "Activités",
+        //     subItems: [],
+        //     link: '/realisations'
+        // },
         {
             title: "Activités",
-            subItems: [],
-            link: '/realisations'
+            subItems: activitiesSections,
+            link: '/activites'
         },
         {
             title: "Comment nous aider ?",
@@ -100,13 +178,13 @@ function Navbar() {
                                 <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-[#EA3A8A] transition-colors" />
                             </Link>
                             <ul className="space-y-3">
-                                {section.items.map((item: string, itemIndex: number) => (
+                                {section.items.map((item: any, itemIndex: number) => (
                                     <li key={itemIndex}>
                                         <Link
-                                            to="#"
+                                            to={typeof item === 'string' ? "#" : item.link}
                                             className="text-lg text-gray-700 hover:text-[#EA3A8A] transition-colors block"
                                         >
-                                            {item}
+                                            {typeof item === 'string' ? item : item.title}
                                         </Link>
                                     </li>
                                 ))}
@@ -127,13 +205,13 @@ function Navbar() {
                             {section.title}
                         </h3>
                         <ul className="space-y-2 pl-2">
-                            {section.items.map((item: string, itemIndex: number) => (
+                            {section.items.map((item: any, itemIndex: number) => (
                                 <li key={itemIndex}>
                                     <Link
-                                        to="#"
+                                        to={typeof item === 'string' ? "#" : item.link}
                                         className="block py-1 text-gray-600 hover:text-blue-600 text-sm"
                                     >
-                                        {item}
+                                        {typeof item === 'string' ? item : item.title}
                                     </Link>
                                 </li>
                             ))}
@@ -156,7 +234,7 @@ function Navbar() {
                                     <div className="text-xl lg:text-2xl font-bold">
                                         <Link to='/'>
                                             <img
-                                                src="/src/assets/logos/logo.png"
+                                                src={logo}
                                                 width={100}
                                                 height={100}
                                                 alt="Logo"
@@ -200,18 +278,18 @@ function Navbar() {
                                                 <ChevronDown className="h-4 w-4 ml-1 transition-transform group-hover:rotate-180" />
                                             )}
                                         </Link>
-                                        {item.subItems.length > 0 && item.title === "Comment nous aider ?" ? (
+                                        {item.subItems.length > 0 && (item.title === "Comment nous aider ?" || item.title === "Activités") ? (
                                             renderDesktopSubmenu(item.subItems)
                                         ) : item.subItems.length > 0 && (
                                             <div className="py-3 absolute left-1/2 transform -translate-x-1/2 mt-6 w-56 lg:w-80 bg-gray-100 shadow-lg z-50 border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500">
                                                 {item.subItems.map((subItem, subIndex) => (
                                                     <Link
                                                         key={subIndex}
-                                                        to={subItem.link}
-                                                        className={`flex items-center justify-between px-4 lg:px-10 py-1 text-gray-700 text-sm lg:text-lg hover:underline hover:text-pink-500 ${subItem.title === "À propos du cancer du sein" ? 'font-bold' : ''}`}
+                                                        to={subItem.link || '#'}
+                                                        className={`flex items-center justify-between px-4 lg:px-10 py-1 text-gray-700 text-sm lg:text-lg hover:underline hover:text-pink-500 ${subItem.title === "MedStudents Leaders Association" ? 'font-bold' : ''}`}
                                                     >
                                                         <span>{subItem.title}</span>
-                                                        {subItem.title === "À propos du cancer du sein" && <ChevronRight className="ml-2" size={16} />}
+                                                        {subItem.title === "MedStudents Leaders Association" && <ChevronRight className="ml-2" size={16} />}
                                                     </Link>
                                                 ))}
                                             </div>
@@ -253,7 +331,7 @@ function Navbar() {
                                                 )}
                                             </button>
                                             {activeMobileSubmenu === index && item.subItems.length > 0 && (
-                                                item.title === "Comment nous aider ?" ? (
+                                                (item.title === "Comment nous aider ?" || item.title === "Activités") ? (
                                                     renderMobileSubmenu(item.subItems)
                                                 ) : (
                                                     <div className="pl-4 space-y-1 mt-1">
@@ -261,7 +339,7 @@ function Navbar() {
                                                             <Link
                                                                 key={subIndex}
                                                                 to={subItem.link || '#'}
-                                                                className={`block py-2 text-gray-600 hover:text-blue-600 text-sm ${subItem.title === "À propos du cancer du sein" ? 'font-bold' : ''}`}
+                                                                className={`block py-2 text-gray-600 hover:text-blue-600 text-sm ${subItem.title === "MedStudents Leaders Association" ? 'font-bold' : ''}`}
                                                             >
                                                                 {subItem.title}
                                                             </Link>

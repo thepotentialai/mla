@@ -36,16 +36,16 @@ function Page() {
 
                             <div className="space-y-2 mb-8">
                                 <h2 className="text-xl font-semibold text-pink-600">Personal Information We Receive</h2>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('use')}>How We Use Personal Information</p>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('share')}>How We Share Personal Information</p>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('protect')}>How We Protect Your Personal Information</p>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('rights')}>Your Privacy Rights</p>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('preferences')}>Your Contact Preferences</p>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('security')}>Data Security</p>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('retention')}>Retention</p>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('notices')}>Other Notices and Disclosures</p>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('contact')}>How to Contact Us</p>
-                                <p className="cursor-pointer text-pink-500 hover:underline" onClick={() => toggleSection('updates')}>Updates to this Privacy Policy</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >How We Use Personal Information</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >How We Share Personal Information</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >How We Protect Your Personal Information</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >Your Privacy Rights</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >Your Contact Preferences</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >Data Security</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >Retention</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >Other Notices and Disclosures</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >How to Contact Us</p>
+                                <p className="cursor-pointer text-pink-500 hover:underline" >Updates to this Privacy Policy</p>
                             </div>
 
                             <h2 className="text-2xl font-semibold text-gray-800 mb-4">Personal Information We Receive</h2>

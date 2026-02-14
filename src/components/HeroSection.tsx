@@ -1,14 +1,14 @@
 import {useState} from "react";
 import { Heart } from 'lucide-react';
 // import hero_img from '/assets/images/J1/DSC_2181.jpg'
-// import hero_img from '/assets/images/realisations/cancer_banner.jpeg'
+// import hero_img from '/assets/images/activites/cancer_banner.jpeg'
 import hero_img from '../assets/images/J1/DSC_2436.jpg'
 import logo_mission from '../assets/logos/logo_white.png'
 
 
 function HeroSection() {
     const [donationType, setDonationType] = useState<'one-time' | 'monthly'>('one-time');
-    const [amount, setAmount] = useState<string>('20');
+    const [amount, setAmount] = useState<string>('2000');
     return (
         <>
             <div className="relative min-h-[600px] lg:h-[70vh]">
@@ -28,10 +28,10 @@ function HeroSection() {
                 <div className="relative max-w-7xl mx-auto px-4 py-16 lg:h-full lg:py-0 flex flex-col lg:flex-row items-center justify-between gap-12">
                     <div className="text-white max-w-2xl">
                         <h1 className="text-4xl lg:text-5xl mb-4 font-semibold">
-                            Ending cancer needs
+                            En finir avec le cancer
                         </h1>
                         <p className="text-5xl lg:text-6xl text-pink-400 font-semibold">
-                            All of Us.
+                            Pour Nous Tous.
                         </p>
                     </div>
 
@@ -68,63 +68,63 @@ function HeroSection() {
                         <div className="grid grid-cols-3 gap-4 mb-6">
                             <button
                                 className={`py-3 rounded-md text-center ${
-                                    amount === '180'
+                                    amount === '18000'
                                         ? 'bg-pink-100 text-pink-500 border-1 border-pink-500'
                                         : 'bg-gray-100 text-gray-800 border-1 hover:bg-gray-200 border-gray-200'
                                 }`}
-                                onClick={() => setAmount('180')}
+                                onClick={() => setAmount('18000')}
                             >
-                                180 €
+                                18000 CFA
                             </button>
                             <button
                                 className={`py-3 rounded-md text-center ${
-                                    amount === '90'
+                                    amount === '9000'
                                         ? 'bg-pink-100 text-pink-500 border-1 border-pink-500'
                                         : 'bg-gray-100 text-gray-800 border-1 hover:bg-gray-200 border-gray-200'
                                 }`}
-                                onClick={() => setAmount('90')}
+                                onClick={() => setAmount('9000')}
                             >
-                                90 €
+                                9000 CFA
                             </button>
                             <button
                                 className={`py-3 rounded-md text-center ${
-                                    amount === '45'
+                                    amount === '4500'
                                         ? 'bg-pink-100 text-pink-500 border-1 border-pink-500'
                                         : 'bg-gray-100 text-gray-800 border-1 hover:bg-gray-200 border-gray-200'
                                 }`}
-                                onClick={() => setAmount('45')}
+                                onClick={() => setAmount('4500')}
                             >
-                                45 €
+                                4500 CFA
                             </button>
                             <button
                                 className={`py-3 rounded-md text-center ${
-                                    amount === '20'
+                                    amount === '2000'
                                         ? 'bg-pink-100 text-pink-500 border-1 border-pink-500'
                                         : 'bg-gray-100 text-gray-800 border-1 hover:bg-gray-200 border-gray-200'
                                 }`}
-                                onClick={() => setAmount('20')}
+                                onClick={() => setAmount('2000')}
                             >
-                                20 €
-                            </button>
-                            <button
-                                className={`py-3 px-4 rounded-md text-center ${
-                                    amount === '12'
-                                        ? 'bg-pink-100 text-pink-500 border-1 border-pink-500'
-                                        : 'bg-gray-100 text-gray-800 border-1 hover:bg-gray-200 border-gray-200'
-                                }`}
-                                onClick={() => setAmount('12')}
-                            >
-                                12 €
+                                2000 CFA
                             </button>
                             <button
                                 className={`py-3 rounded-md text-center ${
-                                    amount === '9'
+                                    amount === '1200'
                                         ? 'bg-pink-100 text-pink-500 border-1 border-pink-500'
                                         : 'bg-gray-100 text-gray-800 border-1 hover:bg-gray-200 border-gray-200'
                                 }`}
-                                onClick={() => setAmount('9')}
+                                onClick={() => setAmount('1200')}
                             >
-                                9 €
+                                1200 CFA
+                            </button>
+                            <button
+                                className={`py-3 rounded-md text-center ${
+                                    amount === '900'
+                                        ? 'bg-pink-100 text-pink-500 border-1 border-pink-500'
+                                        : 'bg-gray-100 text-gray-800 border-1 hover:bg-gray-200 border-gray-200'
+                                }`}
+                                onClick={() => setAmount('900')}
+                            >
+                                900 CFA
                             </button>
                         </div>
 
@@ -136,7 +136,7 @@ function HeroSection() {
                                 className="w-full py-3 px-4 border rounded-md"
                             />
                             <span className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500">
-                                EUR
+                                CFA
                             </span>
                         </div>
 

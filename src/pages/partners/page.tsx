@@ -96,7 +96,7 @@ function Page() {
             >
 
                 <div className="text-center">
-                    <h1 className="text-2xl font-medium text-gray-50">Join our community of corporate partners.</h1>
+                    <h1 className="text-2xl font-medium text-gray-50">Rejoignez notre communauté de partenaires.</h1>
                 </div>
             </div>
 
@@ -105,10 +105,10 @@ function Page() {
             >
 
                 <div className="text-center w-7xl lg:px-40">
-                    <h1 className="text-2xl font-semibold text-black opacity-70">MEET OUR PARTNERS
+                    <h1 className="text-2xl font-semibold text-black opacity-70">DECOUVREZ NOS PARTENAIRES
 
                     </h1>
-                    <p className={'mt-4 text-lg text-black opacity-50'}>This community of bold corporate leaders shares our vision of creating a world without breast cancer. Together, we power innovative breakthrough research, break down inequitable barriers to quality care, provide patients’ direct support, and advocate for patients’ rights. Thanks to their support, we are making a meaningful difference in the lives of the breast cancer community every day.</p>
+                    <p className={'mt-4 text-lg text-black opacity-50'}>Cette communauté de leaders corporatifs audacieux partage notre vision de créer un monde sans cancer du sein. Ensemble, nous alimentons des recherches de rupture, brisons les barrières d'inégalité à la qualité du soin, fournissons un soutien direct aux patients et nous défendons les droits des patients. Grâce à leur soutien, nous faisons une différence significative dans la vie de la communauté du cancer du sein chaque jour.</p>
                     <a href="#partner-form">
                         <button className="bg-pink-500 mt-4 font-bold mb-1 lg:mb-2 text-white px-3 py-2 lg:px-4 lg:py-3 hover:bg-pink-700 transition-all duration-300 cursor-pointer text-xl lg:text-base">
                             DEVENIR UN PARTENAIRE
@@ -116,13 +116,36 @@ function Page() {
                     </a>
                 </div>
             </div>
-            <div className={"py-8 md:px-36 px-1"}>
-                <div className={'grid grid-cols-2 lg:grid-cols-4 gap-8'}>
-                    {partners.map((partner, index) => (
-                        <div key={index} className={'flex items-center justify-center'}>
-                            <img src={partner.image} alt={partner.name} width={200} height={200} />
-                        </div>
-                    ))}
+            <div className="py-8 overflow-hidden">
+                <style>{`
+                    @keyframes partners-carousel {
+                        0% { transform: translateX(0); }
+                        100% { transform: translateX(-50%); }
+                    }
+                    .partners-track {
+                        animation: partners-carousel 30s linear infinite;
+                    }
+                    .partners-track:hover {
+                        animation-play-state: paused;
+                    }
+                `}</style>
+                <div className="flex w-max">
+                    <div className="partners-track flex items-center gap-12 md:gap-16 px-4 md:px-8">
+                        {[...partners, ...partners].map((partner, index) => (
+                            <div
+                                key={index}
+                                className="flex-shrink-0 flex items-center justify-center w-28 h-28 md:w-36 md:h-36 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                            >
+                                <img
+                                    src={partner.image}
+                                    alt={partner.name}
+                                    className="max-w-full max-h-full object-contain"
+                                    width={144}
+                                    height={144}
+                                />
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
             <div id='partner-form'>

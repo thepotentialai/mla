@@ -2,7 +2,7 @@ import {ChevronDown, ChevronUp, ExternalLink} from 'lucide-react';
 import Banner from "../../../components/Banner.tsx";
 import Breadcrumbs from "../../../components/Breadcrumbs.tsx";
 import {useState} from "react";
-import banner from '../../../assets/images/realisations/cancer_banner.jpeg'
+import banner from '../../../assets/images/activites/cancer_banner.jpeg'
 
 function Page() {
     const [openItems, setOpenItems] = useState<Record<string, boolean>>({});

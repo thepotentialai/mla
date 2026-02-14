@@ -15,7 +15,7 @@ function Page() {
             </div>
 
             {/* Main Content */}
-            <div className="bg-white font-sans py-16 px-4 md:px-8 lg:px-20">
+            <div className="bg-white font-sans py-16 px-4 md:px-8 lg:px-20" id="mission">
                 <div className="max-w-6xl mx-auto space-y-12">
 
                     {/* Header */}
@@ -31,7 +31,7 @@ function Page() {
                     </div>
 
                     {/* Text content */}
-                    <div className="space-y-6 text-gray-700 leading-relaxed text-justify">
+                    <div className="space-y-6 text-gray-700 leading-relaxed text-justify" id="vision">
                         <h3 className="text-2xl font-semibold text-pink-600">Notre mission</h3>
                         <p>
                             Notre mission à la <strong>Medstudents Leaders Association</strong> est de prévenir et de lutter contre les maladies, en particulier les maladies non transmissibles, qui affectent les populations du Togo et d'ailleurs.
@@ -43,7 +43,7 @@ function Page() {
                             Nous sommes fiers de contribuer à cet objectif en mettant en place des initiatives de sensibilisation, des campagnes de prévention et des projets de recherche dans le but d'améliorer la santé des populations vulnérables. Notre organisation est à but non lucratif, ce qui signifie que toutes nos actions sont guidées par notre mission de servir la communauté et de faire une différence positive dans la vie des gens.
                         </p>
 
-                        <h3 className="text-2xl font-semibold text-pink-600 pt-6">Notre Vision</h3>
+                        <h3 className="text-2xl font-semibold text-pink-600 pt-6" id="valeurs">Notre Vision</h3>
                         <p>
                             Nous croyons en la valeur de la prévention et nous travaillons activement de manière bénévole pour éduquer la population sur les facteurs de risque de maladies en général, et en particulier les maladies non transmissibles.
                         </p>
@@ -72,7 +72,7 @@ function Page() {
             </div>
 
             {/* Cards section */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 lg:px-20 py-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-8 lg:px-20 py-16" id="approche">
                 <div className="bg-white rounded-lg shadow-lg overflow-hidden">
                     <div className="p-8">
                         <Diamond className="h-8 w-8 text-pink-500 mb-4" />
@@ -80,13 +80,13 @@ function Page() {
                         <p className="text-gray-600 mb-6">
                             Nous combinons expertise médicale et innovation pour développer des solutions de prévention adaptées aux réalités locales, avec un accent particulier sur l'éducation sanitaire accessible à tous.
                         </p>
-                        <a href="/realisations" className="text-pink-500 font-semibold hover:text-pink-600">
+                        <a href="/activites" className="text-pink-500 font-semibold hover:text-pink-600">
                             Découvrir nos programmes →
                         </a>
                     </div>
                 </div>
 
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden" id="rejoindre">
                     <div className="p-8">
                         <Diamond className="h-8 w-8 text-pink-500 mb-4" />
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">Rejoignez-nous</h3>
